@@ -1,4 +1,4 @@
-const {sequelize} = require("../models");
+import {sequelize} from '../models';
 import logger from '../middlewares/logging';
 
 sequelize.sync({force: false})
@@ -8,3 +8,5 @@ sequelize.sync({force: false})
     .catch((err: Error) => {
         logger.info(`Failed to synchronize the database because of ${err.message}`);
     })
+
+

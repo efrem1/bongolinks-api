@@ -1,22 +1,22 @@
 {
   "development": {
-    "username": "awesome",
+    "username": "root",
     "password": "chenzaapp",
-    "database": "cv_faster",
+    "database": "bongolinks",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
-    "username": "awesome",
+    "username": "root",
     "password": "chenzaapp",
-    "database": "cv_faster",
+    "database": "bongolinks",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "awesome",
+    "username": "root",
     "password": "chenzaapp",
-    "database": "cv_faster",
+    "database": "bongolinks",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }
