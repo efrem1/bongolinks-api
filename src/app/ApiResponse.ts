@@ -35,7 +35,7 @@ export class ApiResponse {
             error: false,
             data
         };
-        return res.status(200).json(body);
+        return res.json(body);
     }
 
     /**

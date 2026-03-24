@@ -2,17 +2,28 @@ import express from 'express';
 import {AuthController} from "../Controllers/AuthController";
 import {authorize} from "../middlewares/authorize";
 import {UserController} from "../Controllers/UserController";
+import {PlatformController} from "../Controllers/PlatformController";
+import {UserCategoryController} from "../Controllers/UserCategoryController";
 
 const router = express.Router();
 
 router.post('/login', AuthController.login);
-router.post('/email-verification',AuthController.verifyEmail);
+router.post('/email-verification', AuthController.verifyEmail);
 
 /**
  * Authorized Routes
  */
 router.use(authorize);
 
-router.get('/me',UserController.me);
+router.get('/me', UserController.me);
+router.post('/check-username', AuthController.liveCheckUsername);
+router.post('/update-username', AuthController.updateUsername);
+router.post('/update-bio', UserController.updateBio);
+
+router.route('/platform')
+    .get(PlatformController.index);
+router.route('/user-categories')
+    .get(UserCategoryController.index);
+
 
 export default router;

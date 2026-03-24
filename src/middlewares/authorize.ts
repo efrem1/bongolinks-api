@@ -8,7 +8,6 @@ export interface AuthenticatedRequest extends Request {
 export const authorize = (req: AuthenticatedRequest, res: Response, next: NextFunction): void => {
     const authHeader = req.headers.authorization;
 
-
     if (!authHeader || !authHeader.startsWith('Bearer ')) {
         res.status(401).json({ message: 'Authorization token is missing or invalid format.' });
         return;
