@@ -18,8 +18,8 @@ export class ApiResponse {
      */
     public static unauthorized(res: Response): Response {
         const body: JSON_RESPONSE = {
-            status: 'success',
-            error: false,
+            status: 'unauthorized',
+            error: true,
         };
         return res.status(401).json(body);
     }

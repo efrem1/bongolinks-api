@@ -3,7 +3,7 @@ import {Resource} from './Resource';
 export interface USER_CATEGORY_RESOURCE_SHAPE {
     id: number;
     title: string;
-    icon: boolean;
+    icon: string;
     subtitle: string;
 }
 

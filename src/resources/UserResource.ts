@@ -8,7 +8,19 @@ export interface USER_RESOURCE_SHAPE {
     full_name: string;
     username: string;
     bio: string;
-    category: USER_CATEGORY_RESOURCE_SHAPE
+    category: USER_CATEGORY_RESOURCE_SHAPE;
+    theme: string;
+    bgColor: string;
+    accentColor: string;
+    avatar: string | null;
+    coverImage: string | null;
+    fontFamily: string;
+    buttonStyle: string;
+    buttonShadow: string;
+    role: string;
+    plan: string;
+    features: string[];
+    is_verified: boolean;
 }
 
 export class UserResource extends Resource<any> {
@@ -21,6 +33,18 @@ export class UserResource extends Resource<any> {
             full_name: `${user.firstName} ${user.lastName}`.trim(),
             bio: user.bio,
             category: UserCategoryResource.item<any, UserCategoryResource>(user.category),
+            theme: user.theme,
+            bgColor: user.bgColor,
+            accentColor: user.accentColor,
+            avatar: user.avatar,
+            coverImage: user.coverImage,
+            fontFamily: user.fontFamily,
+            buttonStyle: user.buttonStyle,
+            buttonShadow: user.buttonShadow,
+            role: user.role,
+            plan: user.Subscriptions?.[0]?.Plan?.name || 'Free',
+            features: user.Subscriptions?.[0]?.Plan?.Features?.map((f: any) => f.key) || [],
+            is_verified: !!user.isVerified,
         };
     }
 }

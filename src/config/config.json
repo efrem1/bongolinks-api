@@ -1,21 +1,21 @@
 {
   "development": {
-    "username": "root",
-    "password": "chenzaapp",
+    "username": "awesome",
+    "password": "[]Password@123[]",
     "database": "bongolinks",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": "chenzaapp",
+    "username": "awesome",
+    "password": "[]Password@123[]",
     "database": "bongolinks",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "chenzaapp",
+    "username": "roawesome",
+    "password": "[]Password@123[]",
     "database": "bongolinks",
     "host": "127.0.0.1",
     "dialect": "mysql"

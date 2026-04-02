@@ -18,6 +18,7 @@ module.exports = (sequelize: Sequelize, DataTypes: any) => {
     Platform.init({
         name: DataTypes.STRING,
         logo: DataTypes.STRING,
+        color: DataTypes.STRING,
     }, {
         sequelize,
         modelName: 'Platform',
